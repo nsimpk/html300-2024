@@ -1,36 +1,14 @@
 <script setup>
 import { ref } from "vue";
 
-const text = ref("Hello!");
-
-function changeText(event) {
-  text.value = event.target.value;
-}
-
-// const hyperlink = ref("https://vuejs.org/");
+const show = ref(true);
 </script>
-
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-    <h1>{{ text }}</h1>
-    <!-- v-on syntax example: -->
-    <!-- <input v-model="text" v-on:input="changeText" /> -->
-
-    <!-- @ syntax example: -->
-    <input v-model="text" @input="changeText" />
-    <!-- <a v-bind:href="hyperlink">{{ hyperlink }}</a> -->
-  </header>
+  <main>
+    <button @click="show = !show">Toggle paragraph visibility</button>
+    <p v-if="show">Can you see me</p>
+    <p v-else>Can you this instead?</p>
+  </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-</style>
+<style scoped></style>
