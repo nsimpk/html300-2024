@@ -6,6 +6,8 @@ const text = ref("Hello!");
 function changeText(event) {
   text.value = event.target.value;
 }
+
+// const hyperlink = ref("https://vuejs.org/");
 </script>
 
 <template>
@@ -23,6 +25,7 @@ function changeText(event) {
 
     <!-- @ syntax example: -->
     <input v-model="text" @input="changeText" />
+    <!-- <a v-bind:href="hyperlink">{{ hyperlink }}</a> -->
   </header>
 </template>
 
