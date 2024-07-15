@@ -1,7 +1,11 @@
 <script setup>
 import { ref } from "vue";
 
-const text = ref("Hello Coders!!");
+const text = ref("Hello!");
+
+function changeText(event) {
+  text.value = event.target.value;
+}
 </script>
 
 <template>
@@ -14,6 +18,11 @@ const text = ref("Hello Coders!!");
       height="125"
     />
     <h1>{{ text }}</h1>
+    <!-- v-on syntax example: -->
+    <!-- <input v-model="text" v-on:input="changeText" /> -->
+
+    <!-- @ syntax example: -->
+    <input v-model="text" @input="changeText" />
   </header>
 </template>
 
