@@ -1,16 +1,36 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import Home from "./components/Home.vue";
+import About from "./components/About.vue";
+import NotFound from "./components/NotFound.vue";
 
-const ingredients = ref(["meat", "cheese", "veggies"]);
+const routes = {
+  "/": Home,
+  "/about": About,
+};
+
+const currentPath = ref(window.location.hash);
+
+window.addEventListener("hashchange", () => {
+  currentPath.value = window.location.hash;
+});
+
+const currentView = computed(() => {
+  return routes[currentPath.value.slice(1) || "/"] || NotFound;
+});
 </script>
+
 <template>
-  <main>
-    <ul>
-      <li v-for="ingredient in ingredients" :key="ingredient">
-        {{ ingredient }}
-      </li>
-    </ul>
-  </main>
+  <a href="#/">Home</a> | <a href="#/about">About</a> |
+  <a href="#/non-existent-path">Broken Link</a>
+  <component :is="currentView" />
+  <footer>Footer for All Pages</footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+footer {
+  position: fixed;
+  bottom: 100px;
+  margin: auto;
+}
+</style>
