@@ -1,19 +1,18 @@
 <script setup>
 import { ref } from 'vue'
 
-const address = ref({
-  name: 'Jane Doe',
-  address: '1234 Fake St',
-  phoneNumber: '555-555-5555'
-})
+const name = ref('Doug Realguy')
+
+import AddressCard from './components/AddressCard.vue'
 </script>
 
 <template>
-  <div class="address-card">
-    <h2>{{ address.name }}</h2>
-    <p>{{ address.address }}</p>
-    <p>{{ address.phoneNumber }}</p>
-  </div>
+  <main>
+    <h1>Using the AddressCard Component</h1>
+    <input type="text" v-model="name" />
+    <AddressCard address="432 Mountain Rd" phoneNumber="555-555-5555" />
+    <AddressCard name="Jane RealPerson" address="2345 Valley Rd" />
+  </main>
 </template>
 
 <style scoped>
