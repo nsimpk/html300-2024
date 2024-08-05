@@ -1,16 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { useCounter } from '../composables/useCounter'
 
-const counter = ref(0)
+const { count, increment, decrement } = useCounter()
 </script>
 
 <template>
   <main>
-    <!-- Using Terneray Operator to change the value of counter -->
     <div>
-      <button @click="counter++">Increment</button>
-      <button @click="counter > 0 ? counter-- : 0">Decrement</button>
-      <p>Counter: {{ counter }}</p>
+      <button @click="increment">Increment</button>
+      <button @click="decrement">Decrement</button>
+      <p>Counter: {{ count }}</p>
     </div>
   </main>
 </template>
