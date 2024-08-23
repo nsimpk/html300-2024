@@ -1,48 +1,27 @@
 # Assignment 09 - APIs and Course Project
 
-We'll spend our final couple weeks working on the final project, so this will act as the final project rubric. We'll be using Nuxt, so please watch the video on Nuxt for a walkthrough of starting up a new project. Nuxt is very similar to Vue CLI, and we'll be able to deploy the course projects for free on Netlify automatically.
+We'll spend our final couple weeks working on the final project, so this will act as the final project rubric. We'll be using Nuxt, so please watch the video on Nuxt for a walkthrough of starting up a new project.
 
 ### References
-- [Yarn](https://yarnpkg.com/lang/en/docs/install/)
-- [Nuxt](https://nuxtjs.org/guide/installation)
-- [Axios](https://github.com/axios/axios)
-- [Axios & Vue](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html)
-- [Vue Docs](https://vuejs.org/v2/guide/)
-- [Vue DevTools - Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en)
-- [Vue DevTools - Firefox](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-- [Bootstrap Vue](https://bootstrap-vue.js.org/docs/)
+- [Nuxt](https://nuxt.com/docs/getting-started/introduction)
+- [Vue Docs](https://vuejs.org/guide)
+- [Bootstrap for Nuxt](https://bootstrap-vue.js.org/docs/](https://nuxt.com/modules/bootstrap)
 - [Netlify](https://www.netlify.com/)
 
 ### Build the Nuxt app:
 -	Watch the video on Nuxt to learn more about the framework
 -	**Create a new repository for this assignment.** Do not build it here.
-	-	In that repo, run `npx create-nuxt-app my-project-title` (replace "my-project-title" with your project's title), and choose the following settings:
+	-	In that repo, run `npx nuxi@latest init <project-name>` (replace <project-name> with your project's title), and choose the following settings:
 		-	Name: anything you like
 		- Package manager: npm or yarn, your preference
-		- Programming language: JavaScript
-		- UI Framework: Bootstrap Vue (optional)
-		-	Nuxt.js modules: Axios (use spacebar to select)
-		- Linting tools: none
-		- Testing framework: none
-		- Rending mode: Universal
-		- Deployment target: Static
-		- Deployment tools: none
-		- GitHub username: your username, which should be the default here
-		- Version control system: Git
-	-	The install will begin
-	-	`cd` into your newly created project directory
-	-	Follow instructions in the generated project's README to start the local server
-- Add Sass support:
-  -	Use the appropriate package manager (yarn or npm) to install `node-sass` and  `sass-loader`
-	-	Add `lang="scss"` to all `<style>` tags in templates
+		- Initialize Git Repository?: YES
+		
+	  	- `cd` into your newly created project directory
+		- Follow instructions in the generated project's README to start the local server
 -	Migrate over your Vue template files and assets from the Vue CLI project to their respective spots in the Nuxt app.
 	- Migrate content related to layout from the 'App.vue' file to `layouts/default.vue`.	Migrate page templates to the `pages` directory and component templates to the `components` directory. More information about views: https://nuxtjs.org/docs/2.x/concepts/views
 	-	For internal links, now use `<nuxt-link>` components. More information on Nuxt routing: https://nuxtjs.org/docs/2.x/get-started/routing/
--	Add any additional packages you are using.
 
-### Bootstrap-Vue package:
-
-There aren't many good resources on using bootstrap-vue package with Nuxt. Luckily, it's very easy! If you choose "Bootstrap Vue" for UI Framework in the app setup, everything should be connected automatically, and you can immediately start using Bootstrap components in view files.
 
 ### Additional items:
 -	The site should have at least 4 pages (including the home) with `<nuxt-link>` used to navigate between them in the nav
