@@ -4,3 +4,62 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.main {
+    padding: 2rem;
+}
+.nav {
+    background: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem, 1rem;
+    flex-wrap: wrap;
+    flex: auto;
+    &-wrap{
+        max-width: 1920px;
+    }
+    &__logo,
+    &__login{
+        font-size: 30px;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        text-decoration: none;
+        margin: 0 auto 1rem;
+        width: auto;
+    }
+    &__login{
+        margin: 2rem auto 0;
+        @include media-query(tab){
+            margin: 0;
+            width: auto;
+        }
+    &__list{
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+    &__item{
+        display: inline-block;
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+        margin-right: 1rem;
+        &:last-of-type{
+            margin: 0;
+        }
+    &__link{
+        color: white;
+    }
+    }
+    }
+}
