@@ -37,7 +37,7 @@ These pages can be copied over to your final project later, so create them using
 -     Now, create 4 pages with the following requirements
   -     A navbar that navigates across the four pages
   -     Use of tooltips or popovers somewhere on one of the pages
-  -     Page 1: A landing page with some content
+  -     Page 1: A landing page with some content + JUMBOTRON + alert
   -     Page 2: A page with images using Bootstrap responsive/fluid images
   -     Page 3: A page with a layout that utilizes the Bootstrap grid system, make sure page 			components use at least 3 bootstrap sizes (XS, SM, MD, LG, XL)
   -     Page 4: A page that uses a Bootstrap accordion component
