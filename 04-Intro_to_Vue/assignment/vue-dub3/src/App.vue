@@ -44,8 +44,12 @@ const currentView = computed(() => {
     <a href="#/vue-Not-Found">Broken Link</a>
     <component :is="currentView" />
   </main>
-
-  <footer>Footer of all footers</footer>
+<!-- Not sure why my Click button doesn't work, It seems to react to link clicks in the nav but not button clicks -->
+  <footer>Footer of all footers
+    <button @click="show=!show">Click Me</button>
+    <p v-if="show">SEE ME</p>
+    <p v-else>"NOW YOU DONT"</p>
+  </footer>
 </template>
 
 <style scoped>
